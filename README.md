@@ -14,9 +14,13 @@ oranbusiness@gmail.com
 
 ![](Screenshot_5.png)
 
+![](marble_cover_lerp_color.gif)
 -----
 # Dev log
 # WORKS! v1
 ![](Screenshot_5.png)
 # added slider and generate button
 ![](Screenshot_1.png)
+
+# Fun detour
+![](marble_cover_lerp_color.gif)
