@@ -64,18 +64,27 @@ function draw() {
 function toggle_color_mode() {
     is_color_mode = !is_color_mode;
 }
+
+function dsigmoid(y) {
+    // return sigmoid(x) * (1 - sigmoid(x));
+    return y * (1 - y);
+  }
+function sigmoid(x) {
+    // return 1 / (1 + Math.exp(-x));
+    return dsigmoid(x)
+  }
 function render_marble() {
     push()
     step = map(stepSlider.value(), 0, 255, 0, 0.389);
     for (let x = 0; x < width; x += p_size) {
         for (let y = 0; y < height; y += p_size) {
             let c = 255 * noise(step * x, step * y);
+            
             if (c > 100) {
                 c = 0;
             } else if (c > 20) {
                 c = 255;
             }
-            // let lerped = color_lerp(c, color_start, color_end);
             fill(c);
             rect(x, y, p_size, p_size);
         }
